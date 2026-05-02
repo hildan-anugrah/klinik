@@ -1,7 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) session_start();
 if (!empty($_SESSION['user_id'])) {
-    header('Location: /klinik/dashboard.php');
+    header('Location: /dashboard.php');
     exit;
 }
 $error = $_SESSION['error'] ?? '';
@@ -16,7 +16,7 @@ unset($_SESSION['error']);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/klinik/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 <div class="auth-wrapper">
@@ -31,7 +31,7 @@ unset($_SESSION['error']);
             <div class="alert alert-error">⚠️ <?= htmlspecialchars($error) ?></div>
         <?php endif; ?>
 
-        <form action="/klinik/auth/proses_register.php" method="POST">
+        <form action="/auth/proses_register.php" method="POST">
             <div class="form-group">
                 <label for="nama">Nama Lengkap</label>
                 <input type="text" id="nama" name="nama" placeholder="Nama lengkap Anda" required>
@@ -70,10 +70,10 @@ unset($_SESSION['error']);
         </form>
 
         <p class="auth-footer-text">
-            Sudah punya akun? <a href="/klinik/login.php">Masuk di sini</a>
+            Sudah punya akun? <a href="/login.php">Masuk di sini</a>
         </p>
     </div>
 </div>
-<script src="/klinik/assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>

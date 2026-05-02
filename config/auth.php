@@ -16,7 +16,7 @@ function cekLogin(): void
         session_start();
     }
     if (empty($_SESSION['user_id'])) {
-        header('Location: /klinik/login.php');
+        header('Location: /login.php');
         exit;
     }
 }
@@ -25,7 +25,7 @@ function cekRole(array $roles): void
 {
     cekLogin();
     if (!in_array($_SESSION['role'], $roles, true)) {
-        header('Location: /klinik/dashboard.php');
+        header('Location: /dashboard.php');
         exit;
     }
 }

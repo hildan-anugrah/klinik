@@ -112,3 +112,5 @@ Mengelola catatan kesehatan di tabel `rekam_medis`.
 - `logout.php`: Menghancurkan sesi dan kembali ke halaman login.
 - `auth/proses_login.php`: Logika pemrosesan form login.
 - `auth/proses_register.php`: Logika pendaftaran akun pasien baru.
+
+

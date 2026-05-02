@@ -18,23 +18,23 @@ function sidebarLink(string $href, string $label, string $currentPage): string
         <button class="sidebar-close" id="sidebarClose">✕</button>
     </div>
     <nav class="sidebar-nav">
-        <?= sidebarLink('/klinik/dashboard.php',  'Dashboard', $currentPage) ?>
+        <?= sidebarLink('/dashboard.php',  'Dashboard', $currentPage) ?>
 
         <?php if ($role === 'admin'): ?>
-            <?= sidebarLink('/klinik/kelola_pasien.php',  'Kelola Pasien', $currentPage) ?>
-            <?= sidebarLink('/klinik/kelola_dokter.php',  'Kelola Dokter', $currentPage) ?>
-            <?= sidebarLink('/klinik/kelola_admin.php',  'Kelola Admin', $currentPage) ?>
-            <?= sidebarLink('/klinik/rekam_medis.php',  'Rekam Medis', $currentPage) ?>
+            <?= sidebarLink('/kelola_pasien.php',  'Kelola Pasien', $currentPage) ?>
+            <?= sidebarLink('/kelola_dokter.php',  'Kelola Dokter', $currentPage) ?>
+            <?= sidebarLink('/kelola_admin.php',  'Kelola Admin', $currentPage) ?>
+            <?= sidebarLink('/rekam_medis.php',  'Rekam Medis', $currentPage) ?>
         <?php elseif ($role === 'dokter'): ?>
-            <?= sidebarLink('/klinik/rekam_medis.php',  'Rekam Medis', $currentPage) ?>
+            <?= sidebarLink('/rekam_medis.php',  'Rekam Medis', $currentPage) ?>
         <?php elseif ($role === 'pasien'): ?>
-            <?= sidebarLink('/klinik/rekam_medis.php',  'Rekam Medis Saya', $currentPage) ?>
+            <?= sidebarLink('/rekam_medis.php',  'Rekam Medis Saya', $currentPage) ?>
         <?php endif; ?>
 
-        <?= sidebarLink('/klinik/profil.php',  'Profil Saya', $currentPage) ?>
+        <?= sidebarLink('/profil.php',  'Profil Saya', $currentPage) ?>
     </nav>
     <div class="sidebar-footer">
-        <a href="/klinik/logout.php" class="sidebar-link logout-link"><span>Keluar</span></a>
+        <a href="/logout.php" class="sidebar-link logout-link"><span>Keluar</span></a>
     </div>
 </aside>
 <div class="sidebar-overlay" id="sidebarOverlay"></div>

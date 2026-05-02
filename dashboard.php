@@ -176,7 +176,7 @@ $pageTitle = 'Dashboard';
                         <span class="empty-state-icon">👤</span>
                         <h3>Data profil belum lengkap</h3>
                         <p>Silakan lengkapi data profil Anda terlebih dahulu.</p>
-                        <a href="/klinik/profil.php" class="btn btn-primary" style="margin-top:12px;">Lengkapi Profil</a>
+                        <a href="/profil.php" class="btn btn-primary" style="margin-top:12px;">Lengkapi Profil</a>
                     </div>
                     <?php endif; ?>
                 </div>
